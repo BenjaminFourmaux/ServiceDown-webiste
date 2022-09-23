@@ -3,7 +3,7 @@ Webiste of ServiceDown project
 \
 [![](https://badgen.net/badge/Service/Down/red)]()
 [![](https://img.shields.io/badge/php-7.4-blue?logo=php&logoColor=orange)]()
-[![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
 ![Banner](/views/assets/img/banner_github-white.png#gh-light-mode-only)
 ![Banner](/views/assets/img/banner_github-darkgrey.png#gh-dark-mode-only)
