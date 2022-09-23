@@ -1,4 +1,4 @@
-# ServiceDown-webiste
+# ServiceDown-website
 Webiste of ServiceDown project
 \
 [![](https://badgen.net/badge/Service/Down/red)]()
