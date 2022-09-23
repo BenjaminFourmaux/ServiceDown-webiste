@@ -1,0 +1,168 @@
+{
+	"websiteTitle":"Service Down - État des Services",
+	"nav": {
+		"home": "Home",
+		"services": "Services",
+		"api": "API",
+		"about": "A propos"
+	},
+	"footer": {
+		"sections": [
+			{
+				"title": "Site web",
+				"items": ["Home", "Services", "Back-Office"]
+			},
+			{
+				"title": "Nos outils",
+				"items": ["Dashboard", "API", "Update"]
+			},
+			{
+				"title": "Nous contacter",
+				"items": ["Qui sommes-nous ?", "Nous contacter"]
+			}
+		]
+	},
+	"pages": {
+		"home": {
+			"title": "Home",
+			"carousel": {
+				"slide1": {
+					"title": "{{<0>}}Service{{</0>}} {{<1>}}Down{{</1>}}",
+					"subtitle": "Platforme de surveillance de l'état des services en ligne",
+					"asterix": "*: Données ouvertes en accès libre et gratuit."
+				},
+				"slide2": {
+					"title": "Surveillance en temps réel de l'état des services",
+					"subtitle": "Restez informé des problèmes et interruptions de service"
+				},
+				"slide3": {
+					"title": "L'API Service Down pour les développeurs",
+					"subtitle": "Statut des services, statistiques, données en temps réel ..."
+				}
+			},
+			"sections": {
+				"services": {
+					"title": "Services impactés",
+					"noService": "Tout est bon ! Pas de service en panne pour le moment."
+				},
+				"news": {
+					"title": "News",
+					"bodyText": "Actualités sur Service Down et les services."
+				},
+				"opensource": {
+					"title": "Open Source",
+					"bodyText": "Retrouvez tout le code source de Service Down en Open Source sur GitHub."
+				},
+				"sponsorship": {
+					"title": "Nous soutenir",
+					"bodyText": "Parce que Service Down est open source, gratuit et libre d'accès, vous pouvez nous soutenir et participer aux frais d'exploitation de Service Down."
+				}
+			}
+		},
+		"services": {
+			"hTitle": "Services - Service Down",
+			"title": "Services",
+			"form": {
+				"selectCountry": "Pays sélectionné :"
+			}
+		},
+		"about": {
+			"hTitle": "A propos - Service Down",
+			"title": "A propos",
+			"sections": {
+				"presentation": "Présentation",
+				"openSource": "Open Source",
+				"works": "Fonctionnement",
+				"services": "Services",
+				"keyNumbers": "Chiffres clé"
+			},
+			"sect":[
+				{
+					"title": "C'est quoi Service Down ?",
+					"body": "Service Down est une plateform <a href=\"#openSource\">Open Source</a> de surveillance de l'état des services sur Internet.<br>Créé en 2022 par <strong>Benjamin Fourmaux -- Beruet</strong>, dans le but de rendre <strong>open data</strong> ces données, Service Down est une solution <strong>libre</strong> et <strong>gratuite</strong>."
+				},
+				{
+					"title": "Open Source",
+					"body": "Reprenant l'idéologie de l'<strong>Open</strong>, valeur très chère aux yeux du créateur de cette plateforme. Service Down met à disposition de tous, tous les codes sources, disponibles sur <a href=\"https://github.com/BenjaminFourmaux/ServiceDown\">GitHub</a>,  ainsi que toutes les données, disponibles sur l'<a href=\"https://api.service-down.com/\">API Service Down</a>.<br> Et ce <strong>gratuitement</strong> et <strong>librement</strong>."
+				},
+				{
+					"title": "Fonctionnement",
+					"subtitle-1": "État du service",
+					"text-1-head": "Service Down permet de connaitre l'état d'un service.<br>L'état peut être 1 des 3 types suivants :",
+					"text-1": "D'autres informations permettent d'en savoir plus sur l'origine de la panne, les sous-services impactés (connexion, téléphonie, payement en ligne, application mobile ...). Un graphique est généré permentant de savoir le nombre de rapport à un instant donné.",
+					"list": [
+						{
+							"label": "Bon",
+							"text": "Il n'y a pas de problème, tout est OK."
+						},
+						{
+							"label": "Attention",
+							"text": "Il se peut que le service soit en panne."
+						},
+						{
+							"label": "Erreur",
+							"text": "Le service est impacté par un problème."
+						}
+					],
+					"subtitle-2": "Signalement",
+					"text-2": "Les données se basent sur le signalement par les utilisateurs lorsqu'ils rencontrent des problèmes.<br> Pour cela, il suffit de se rendre sur la page du service concerné et de soummetre un rapport avec en option le sous-service impacté, en cliquant sur le bouton \"Signaler une panne\".",
+					"end": "Ces données sont ensuite exploitées à des fins statistiques."
+				},
+				{
+					"title": "Services",
+					"body": "Retrouvez tous les services que vous utilisez au quotidien, que ce soit dans votre vie privée ou professionnelle.",
+					"items": [
+						"Opérateurs Internet / Téléphonie",
+						"Réseaux sociaux",
+						"Jeux en ligne",
+						"Services en ligne",
+						"Banques",
+						"Sites marchands"
+					]
+				},
+				{
+					"title": "Chiffres clé",
+					"items": [
+						{
+							"num": "+200",
+							"caption": "Services disponibles"
+						},
+						{
+							"num": "2",
+							"caption": "Pays disponibles"
+						}
+					]
+				}
+			]
+		},
+		"search": {
+			"hTitle": "Résultat de recherche - Service Down",
+			"resultFor": "Résultat pour : {{query}}",
+			"resultCount": "{{count}} résultats"
+		},
+		"login": {
+			"hTitle": "Login Portal - Service Down"
+		}
+	},
+	"action": {
+		"login": "Se connecter",
+		"readMore": "En savoir plus",
+		"scrollToTop": "Retour en haut",
+		"seeMore": "Voir plus"
+	},
+	"form": {
+		"mail": "Adresse Email",
+		"password": "Mot de passe",
+		"remenberme": "Se souvernir de moi",
+		"lostPassword": "Mot de passe oublié ?",
+		"createAccount": "Se créer un compte"
+	},
+	"status": {
+		"ok": "Bon",
+		"warning": "Attention",
+		"error": "Erreur"
+	},
+	"login": {
+		"text": "Connectez-vous afin de profiter pleinement de Service Down et accèder à votre Dashboard"
+	}
+}

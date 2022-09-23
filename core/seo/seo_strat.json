@@ -1,0 +1,41 @@
+{
+	"webiste": "www.service-down.fr",
+	"pages": [
+		{
+			"name": "home",
+			"description": "Open Data platform of monitoring services status and user-base outage reporting. + 200 services available",
+			"keywords": "services status, monitoring, open data, open source, outage, down, is down, report, platform, internet state",
+			"generator": "Bootstrap 5 & FontAwesome 5",
+			"theme_color": "#ff0000",
+			"og-title": "Service Down",
+			"og-description" : "Open Data platform of monitoring services status and user-base outage reporting. + 200 services available",
+			"og-type": "website",
+			"og-url": "https://www.service-down.com/",
+			"og-image": "https://cdn.service-down.com/"
+		},
+		{
+			"name": "services",
+			"description": "List of services available for monitoring on Service Down",
+			"keywords": "list, all, services, available, service down",
+			"generator": "Bootstrap 5 & FontAwesome 5",
+			"theme_color": "#ff0000",
+			"og-title": "Services - Service Down",
+			"og-description" : "List of services available for monitoring on Service Down",
+			"og-type": "website",
+			"og-url": "https://www.service-down.com/services",
+			"og-image": "https://cdn.service-down.com/"
+		},
+		{
+			"name": "about",
+			"description": "About Service Down. Who are we ? What is our project ? how it works ?",
+			"keywords": "about, what is our project, faq, how it work, who, service down, open source",
+			"generator": "Bootstrap 5 & FontAwesome 5",
+			"theme_color": "#ff0000",
+			"og-title": "About - Service Down",
+			"og-description" : "About Service Down. Who are we ? What is our project ? how it works ?",
+			"og-type": "website",
+			"og-url": "https://www.service-down.com/about",
+			"og-image": "https://cdn.service-down.com/"
+		}
+	]
+}

@@ -1,0 +1,10 @@
+<div id="donate-button-container">
+	<div id="paypal-donate-button"></div>
+	<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+	<script>
+		PayPal.Donation.Button({
+			env:'production',
+			hosted_button_id:'F3YV8ND8H4C8Y',
+		}).render('#paypal-donate-button');
+	</script>
+</div>

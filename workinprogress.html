@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Work In Progress - Service Down</title>
+		<link rel="icon" href="../views/assets/img/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="noindex"/>
+		<style>
+			:root {
+				--sd-color-yellow: #ffc107;
+				--sd-color-red: #ff0000;
+				--sd-bgcolor-dark: rgb(33,37,41);
+			}
+			body {
+				font-family: Arial;
+				margin: 0;
+			}
+			body.dark {
+				color: white;
+				background-color: var(--sd-bgcolor-dark);
+			}
+			header {
+				background-color: var(--sd-color-red);
+			}
+			header .sd-header {
+				display: flex;
+				align-items: center;
+			}
+			header .sd-header img {
+				width: 50px;
+				height: 50px;
+				margin-right: 20px;
+			}
+			header .sd-header img, header .sd-header h1 {
+				cursor: pointer;
+			}
+			.container {
+				padding-right: 15px;
+				padding-left: 15px;
+				margin-right: auto;
+				margin-left: auto;
+			}
+			.error-box {
+				margin-top: 20vh;
+				text-align: center;
+			}
+			.error-box .error-title {
+				font-size: 1.5em;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 3px;
+			}
+			.error-box .error-img img {
+				width: 300px;
+			}
+			.error-box .error-text {
+				font-size: 1.4em;
+			}
+			.error-box .error-link a {
+				color: var(--sd-color-yellow);
+				font-size: 2.2em;
+				padding: 5px 10px;
+			}
+			.error-box .error-link a:hover {
+				filter: brightness(0.60);
+			}
+			
+			/* Media */
+			@media (min-width: 1200px){
+				.container {
+					max-width: 1140px;
+				}
+				
+			}
+			@media (max-width: 576px){
+				.container {
+					max-width: 100%;
+				}
+				.error-box {
+					margin-top: 10vh;
+				}
+				.error-box .error-text {
+					font-size: 1.2em;
+				}
+				.error-box .error-img img {
+					width: 150px;
+				}
+				.error-box .error-link a {
+					font-size: 1.3em;
+				}
+			}
+			
+			/* Keyframes */
+			@keyframes codeAnimated {
+				from {
+					letter-spacing: -160px;
+				}
+				to {
+					letter-spacing: -50px;
+				}
+			}
+		</style>
+	</head>
+	<body class="dark">
+		<header>
+			<div class="container">
+				<div class="sd-header" onClick="location.href='https://www.service-down.com/'">
+					<img src="views/assets/img/logo-v1-white-50x50.png" alt="Service Down Logo"/>
+					<h1>Service Down</h1>
+				</div>
+			</div>
+		</header>
+	
+		<div class="container">
+			<div class="error-box">
+				<div class="error-title">
+					<h3>Work In Progress</h3>
+				</div>
+				<div class="error-img">
+					<img src="workinprogress.png" />
+				</div>
+				<div class="error-text">
+					<p>
+						Travaux de maintenance en cours...
+						<br>
+						Veuillez patienter.
+					</p>
+				</div>
+				<div class="error-link" id="link-div">
+					<a href="https://www.service-down.com">Website</a>
+					<a href="https://www.service-down.com/update/">Update</a>
+					<a href="https://api.service-down.com">API</a>
+					<a href="https://github.com/BenjaminFourmaux/ServiceDown/">GitHub</a>
+				</div>
+			</div>
+		</div>	
+	</body>
+</html>
+
