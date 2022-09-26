@@ -5,13 +5,13 @@
 				<h5 data-i18n>footer.sections.0.title</h5>
 				<ul class="nav flex-column">
 					<li class="nav-item mb-2">
-						<a href="https://www.service-down.com/" class="nav-link p-0 text-muted" data-i18n>footer.sections.0.items.0</a>
+						<a href="https://www.service-down.net/" class="nav-link p-0 text-muted" data-i18n>footer.sections.0.items.0</a>
 					</li>
 					<li class="nav-item mb-2">
-						<a href="https://www.service-down.com/service" class="nav-link p-0 text-muted" data-i18n>footer.sections.0.items.1</a>
+						<a href="https://www.service-down.net/service" class="nav-link p-0 text-muted" data-i18n>footer.sections.0.items.1</a>
 					</li>
 					<li class="nav-item mb-2">
-						<a href="https://bo.service-down.com/" class="nav-link p-0 text-muted" data-i18n>footer.sections.0.items.2</a>
+						<a href="https://bo.service-down.net/" class="nav-link p-0 text-muted" data-i18n>footer.sections.0.items.2</a>
 					</li>
 				</ul>
 			</div>
@@ -19,13 +19,13 @@
 				<h5 data-i18n>footer.sections.1.title</h5>
 				<ul class="nav flex-column">
 					<li class="nav-item mb-2">
-						<a href="https://dashboard.service-down.com/" class="nav-link p-0 text-muted" data-i18n>footer.sections.1.items.0</a>
+						<a href="https://dashboard.service-down.net/" class="nav-link p-0 text-muted" data-i18n>footer.sections.1.items.0</a>
 					</li>
 					<li class="nav-item mb-2">
-						<a href="https://api.service-down.com/" class="nav-link p-0 text-muted" data-i18n>footer.sections.1.items.1</a>
+						<a href="https://api.service-down.net/" class="nav-link p-0 text-muted" data-i18n>footer.sections.1.items.1</a>
 					</li>
 					<li class="nav-item mb-2">
-						<a href="https://service-down.com/update" class="nav-link p-0 text-muted" data-i18n>footer.sections.1.items.2</a>
+						<a href="https://service-down.net/update" class="nav-link p-0 text-muted" data-i18n>footer.sections.1.items.2</a>
 					</li>
 				</ul>
 			</div>
@@ -33,10 +33,10 @@
 				<h5 data-i18n>footer.sections.2.title</h5>
 				<ul class="nav flex-column">
 					<li class="nav-item mb-2">
-						<a href="https://www.service-down.com/about" class="nav-link p-0 text-muted" data-i18n>footer.sections.2.items.0</a>
+						<a href="https://www.service-down.net/about" class="nav-link p-0 text-muted" data-i18n>footer.sections.2.items.0</a>
 					</li>
 					<li class="nav-item mb-2">
-						<a href="https://www.service-down.com/contact" class="nav-link p-0 text-muted" data-i18n>footer.sections.2.items.1</a>
+						<a href="https://www.service-down.net/contact" class="nav-link p-0 text-muted" data-i18n>footer.sections.2.items.1</a>
 					</li>
 				</ul>
 			</div>
