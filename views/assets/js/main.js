@@ -1,7 +1,9 @@
 /****************
 *	Main.js		*
 ****************/
-var CDN_URI = window.location.protocol + "//cdn." + window.location.hostname;
+const CDN_URI = window.location.protocol + "//cdn." + window.location.hostname;
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
 
 $(document).ready(function() {
 	AOS.init();
@@ -32,7 +34,7 @@ $(document).ready(function() {
 			setCookieCountry(parseInt(selectedValue));
 			
 			if ($('#page-services').length){
-				feedServices(matchCountry(getCookie('country')), null);
+				feedServices(matchCountry(getCookie('country')), pagingUrlParameter());
 			}
 		});
 		feedCountryList($('#selectCountry'));
@@ -43,7 +45,7 @@ $(document).ready(function() {
 	}
 	
 	if ($('#page-services').length){
-		feedServices(matchCountry(getCookie('country')), null);
+		feedServices(matchCountry(getCookie('country')), pagingUrlParameter());
 	}
 });
 
@@ -222,6 +224,31 @@ function statusLabelComponent(statusLabel){
 	}
 }
 
+function AOSDelayByIndex(index){
+	switch(index % 4){
+		case 1: // First col
+			return 600;
+		case 2: // Second col
+			return 700;
+		case 3: // Third col
+			return 800;
+		case 0: // Last col
+			return 900;
+	}
+}
+
+function pagingUrlParameter(){
+	if(urlParams.has('page')){
+		return urlParams.get('page');
+	}
+	return null;
+}
+
+function change_url(new_url){
+   window.history.pushState("object or string", "Title", "/"+new_url);
+}
+
+
 /** -- Ajax Func -- **/
 function feedCountryList(node){
 	countrySelectedId = matchCountry(getCookie('country'));
@@ -326,6 +353,9 @@ function feedCurrentOutage(rowNode, country){
 }
 
 function feedServices (country, pageIndex) {
+	// change URL
+	if(pageIndex !== null){change_url("services?page=" + pageIndex);}
+	
 	// OnLoad
 	$('#page-services #page-body section').css("display", "none");
 	$('#page-services #page-body').append(
@@ -386,10 +416,14 @@ function feedServices (country, pageIndex) {
 			// Create Service Card
 			var rowNode = $('#page-services #page-body section div.row#services-list');
 			rowNode.empty();
+			index = 0;
+			
+			// Browse Services
 			responseData.data.map((service) => {
+				index ++;
 				var service_banner_src = CDN_URI + "/images/service-banner/" + service.service.cname.toLowerCase() + ".png";
 				rowNode.append(
-					'<div class="col-3">' +
+					'<div class="col-3" data-aos="fade-down" data-aos-delay="'+AOSDelayByIndex(index)+'">' +
 						'<div class="card card-service text-dark bg-light mb-3" onClick="location.href=\''+ service.service.path +'\'">' +
 							'<img src="'+ service_banner_src +'" class="card-img-top p-3">' +
 							'<div class="card-body">' +
