@@ -9,7 +9,7 @@ Webiste of ServiceDown project
 ![Banner](/views/assets/img/banner_github-white.png#gh-light-mode-only)
 ![Banner](/views/assets/img/banner_github-darkgrey.png#gh-dark-mode-only)
 
-## Get stated :rocket:
+## Get started :rocket:
 ### Installation
 To install ServiceDown-website, you nee to install some things :
 - A web server runing `PHP 7.4` (preferably IIS) 
