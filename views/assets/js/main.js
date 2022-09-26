@@ -30,6 +30,10 @@ $(document).ready(function() {
 		$('#selectCountry').change(()=> {
 			selectedValue = $(this).find(':selected').val();
 			setCookieCountry(parseInt(selectedValue));
+			
+			if ($('#page-services').length){
+				feedServices(matchCountry(getCookie('country')), null);
+			}
 		});
 		feedCountryList($('#selectCountry'));
 	}
