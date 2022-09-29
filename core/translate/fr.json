@@ -135,6 +135,24 @@
 				}
 			]
 		},
+		"service": {
+			"hTitle": "Statut : {{name}} - Service Down",
+			"seo": {
+				"title": "Statut du service {{name}} - Service Down",
+				"description": "Problèmes et pannes du service {{name}}. Analyse et statistiques de l'état des services en ligne.",
+				"keywords": "{{name}}, status, service, panne, outage, problème, down, report, rapport, signaler, monitoring, surveillance"
+			},
+			"currentStatus": {
+				"title": "Statut actuel",
+				"graph": {
+					"title": "Nombre de signalement au cours des dernières 24 heures"
+				},
+				"send": {
+					"disclaimer": "Vous rencontrez un problème avec {{name}} ? Site qui ne fonctionne pas ? Problème de connexion ? Alors signalé le grâce au bouton ci-dessous",
+					"button": "Signaler"
+				}
+			}
+		},
 		"search": {
 			"hTitle": "Résultat de recherche - Service Down",
 			"resultFor": "Résultat pour : {{query}}",
@@ -155,7 +173,13 @@
 		"password": "Mot de passe",
 		"remenberme": "Se souvernir de moi",
 		"lostPassword": "Mot de passe oublié ?",
-		"createAccount": "Se créer un compte"
+		"createAccount": "Se créer un compte",
+		"graphNbReport": "Nombre de signalement"
+	},
+	"modal": {
+		"textConfirmSendReport": "Votre signalement à bien été envoyé !",
+		"confirm": "Confirmation",
+		"close": "Fermer"
 	},
 	"status": {
 		"ok": "Bon",
@@ -164,5 +188,11 @@
 	},
 	"login": {
 		"text": "Connectez-vous afin de profiter pleinement de Service Down et accèder à votre Dashboard"
+	},
+	"link": {
+		"type": {
+			"website": "Site Internet",
+			"twitter": "Profil Twitter"
+		}
 	}
 }

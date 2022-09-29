@@ -13,5 +13,9 @@
 			
 			return $response = (new Request($uri))->get();
 		}
+		
+		public function get_service_id_by_path($country, $path){
+			return $response = (new Request($this->path."/by_path?country=".$country."&path=".$path))->get();
+		}
 	}
 ?>

@@ -2,7 +2,7 @@
 	/** Services controller **/
 
 	$page_title = $translate->t("pages.services.hTitle");
-	$seo = $seo_manager->for_page('services');
+	$SEO_MANAGER->for_page('services');
 ?>
 <!DOCTYPE html>
 <html lang="<?=$translate->currentLang?>">

@@ -24,11 +24,17 @@
 	*/
 	
 	// get controller name
-	if(!isset($_GET['controller'])) { $controller = ""; } else { $controller = $_GET['controller']; }
+	if(!isset($_GET['controller'])) { $controller = ""; $urlArgs = ""; } else { 
+		$params = explode("/", $_GET['controller']);
+		$controller = $params[0]; 
+		array_shift($params);
+		$urlArgs = $params;
+	}
 	
 	
 	/*** Super global variables ***/
-	$seo_manager = new SEO_manager();
+	$WEBSITE_URI = stripos($_SERVER['SERVER_PROTOCOL'],'https') === 0 ? 'https://' : 'http://' . $_SERVER['HTTP_HOST'];
+	$SEO_MANAGER = new SEO_manager();
 	
 	
 	
@@ -36,6 +42,9 @@
 	switch($controller){
 		case 'services':
 			require('controllers/c_services.php');
+			break;
+		case 'status':
+			require('controllers/c_status.php');
 			break;
 		case 'about':
 			require('controllers/c_about.php');
