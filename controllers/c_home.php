@@ -2,7 +2,7 @@
 	/** Home controller **/
 
 	$page_title = $translate->t("websiteTitle");
-	$seo = $seo_manager->for_page('home');
+	$seo = $SEO_MANAGER->for_page('home');
 ?>
 <!DOCTYPE html>
 <html lang="<?=$translate->currentLang?>">

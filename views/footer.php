@@ -48,7 +48,7 @@
 			<p class="col-md-4 mb-0 text-light">© 2022, Service Down</p>
 
 			<a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-				<img src="views/assets/img/logo-v1-50x50.png" alt="logo-service-down">
+				<img src="<?=$WEBSITE_URI?>/views/assets/img/logo-v1-50x50.png" alt="logo-service-down">
 			</a>
 
 			<!-- <ul class="nav col-md-4 justify-content-end">-->

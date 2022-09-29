@@ -334,12 +334,49 @@ header .search-result {
 }
 
 /** Services **/
-.card-service[onClick] {
-	cursor: pointer;
+.card-service a.card-service-link {
+	text-decoration: none;
+	color: black;
 }
 .card-service .card-service-status {
 	font-size: 20px;
 }
+
+/** Service **/
+#page-status section {
+	margin: 2em 0;
+}
+#page-status .service-info {
+	border: var(--border-default);
+	border-radius: 0.50em;
+	padding: 1em;
+}
+#page-status .service-info .service-info-title {
+	margin: 0.30em 0;
+}
+#page-status .service-info .service-info-link a {
+	color: var(--sd-color-yellow);
+	text-decoration: none;
+	font-size: 2em;
+}
+#page-status .service-info .service-info-link a:hover {
+	color: var(--sd-color-yellow-estomp);
+}
+#page-status .service-info img {
+	width: 20%;
+}
+#page-status .service-status {
+	border: var(--border-default);
+	border-radius: 0.50em;
+	padding: 1em;
+}
+#page-status .service-status .service-status-current .status-icon {
+	font-size: 5em;
+}
+#page-status .service-status .service-status-current .status-label {
+	font-size: 1.7em;
+}
+
 
 /** about **/
 #page-about .body-page p {

@@ -2,7 +2,7 @@
 	/** About controller **/
 
 	$page_title = $translate->t("pages.about.hTitle");
-	$seo = $seo_manager->for_page('about');
+	$seo = $SEO_MANAGER->for_page('about');
 ?>
 <!DOCTYPE html>
 <html lang="<?=$translate->currentLang?>">

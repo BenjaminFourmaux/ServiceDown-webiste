@@ -47,6 +47,17 @@ $(document).ready(function() {
 	if ($('#page-services').length){
 		feedServices(matchCountry(getCookie('country')), pagingUrlParameter());
 	}
+	
+	if ($('#page-status').length){
+		serviceId =  parseInt($('#page-status').attr('data-service-id'));
+		countryId = matchCountry(getCookie('country'));
+		
+		feedServicePage(countryId, serviceId);
+		if($('#send-report').length){
+			$('#send-report').click(() => onSendReport(countryId, serviceId));
+		}
+	}
+	
 });
 
 /** ---- Main Thread ---- **/
@@ -201,6 +212,75 @@ function matchCountry(search){
 	return undefined;
 }
 
+function generateGraphConfig(stats, statusLabel){
+	const labels = [];
+	var currentDateTime = new Date();
+	var statusColor;
+	
+	switch(statusLabel){
+		case 'error':
+			statusColor = "#ff0000";
+			break;
+		case 'warning':
+			statusColor = "#ffc107";
+			break;
+		default:
+			statusColor = "#198754";
+	}
+	
+	for (var i = stats.intervals.length-1; i >= 0; i--){
+		var datePast = new Date();
+		datePast.setHours(currentDateTime.getHours() - i);
+		
+		labels.push(datePast.getHours().toString()+":"+datePast.getMinutes().toString().padStart(2, "0"));
+	}
+	
+	const data = {
+		labels: labels,
+		datasets: [{
+			label: $.t('form.graphNbReport'),
+			backgroundColor: statusColor,
+			borderColor: statusColor,
+			data: stats.intervals,
+		}]
+	};
+	
+	const config = {
+		type: 'line',
+		data: data,
+		options: {
+			scales: {
+				y: {
+					beginAtZero: true,
+					ticks: {
+						color: "white"
+					},
+					grid: {
+						color: "#424345"
+					}
+				},
+				x: {
+					ticks: {
+						color: "white"
+					},
+					grid: {
+						color: "#424345"
+					}
+				}
+			},
+			plugins: {
+				legend: {
+					labels: {
+						color: 'white'
+					}
+				}
+			}
+		}
+	};
+	
+	return config;
+}
+
 function statusLabelComponent(statusLabel){
 	switch(statusLabel) {
 		case 'error':
@@ -221,6 +301,28 @@ function statusLabelComponent(statusLabel){
 					'<i class="fa-solid fa-square-check"></i> ' + $.t('status.'+ statusLabel) +
 				'</<span>'
 			);
+	}
+}
+
+function statusIcon(statusLabel){
+	switch(statusLabel){
+		case 'error':
+			return '<i class="fa-solid fa-circle-exclamation"></i>';
+		case 'warning':
+			return '<i class="fa-solid fa-triangle-exclamation"></i>';
+		default:
+			return '<i class="fa-solid fa-square-check"></i>';
+	}
+}
+
+function statusClass(statusLabel){
+	switch(statusLabel){
+		case 'error':
+			return 'danger';
+		case 'warning':
+			return 'warning';
+		default:
+			return 'success';
 	}
 }
 
@@ -246,6 +348,29 @@ function pagingUrlParameter(){
 
 function change_url(new_url){
    window.history.pushState("object or string", "Title", "/"+new_url);
+}
+
+
+function createModal(nodeId, title, body){
+	$('#'+nodeId).remove();
+	$('#send-report').after(
+		'<div class="modal fade text-dark" id="modalConfirm" tabindex="-1" aria-hidden="false">' +
+			'<div class="modal-dialog">' +
+				'<div class="modal-content">' +
+					'<div class="modal-header">' +
+						'<h5 class="modal-title" id="exampleModalLabel">'+title+'</h5>' +
+						'<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>' +
+					'</div>' +
+					'<div class="modal-body">' +
+						body +
+					'</div>' +
+					'<div class="modal-footer">' +
+						' <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">'+$.t('modal.close')+'</button>' +
+					'</div>' +
+				'</div>' +
+			'</div>' +
+		'</div>'
+	);
 }
 
 
@@ -320,14 +445,16 @@ function feedCurrentOutage(rowNode, country){
 					
 					rowNode.append(
 						'<div class="col-3">' +
-							'<div class="card card-service text-dark bg-light mb-3" onClick="location.href=\''+ service.service.path +'\'">' +
-								'<img src="'+ service_banner_src +'" class="card-img-top p-3">' +
-								'<div class="card-body">' +
-									'<h5 class="card-title text-center">'+ service.service.name +'</h5>' +
-								'</div>' +
-								'<ul class="list-group list-group-flush">' +
-									'<li class="card-service-status list-group-item text-center">'+ statusLabelComponent(service.status.label) +'</li>' +
-								'</ul>' +
+							'<div class="card card-service text-dark bg-light mb-3" data-service-id="'+service.service.id+'">' +
+								'<a href="'+service.service.path+'" title="'+service.service.name+'" class="card-service-link">' +
+									'<img src="'+ service_banner_src +'" class="card-img-top p-3">' +
+									'<div class="card-body">' +
+										'<h5 class="card-title text-center">'+ service.service.name +'</h5>' +
+									'</div>' +
+									'<ul class="list-group list-group-flush">' +
+										'<li class="card-service-status list-group-item text-center">'+ statusLabelComponent(service.status.label) +'</li>' +
+									'</ul>' +
+								'</a>' +
 							'</div>' +
 						'</div>' 
 					);
@@ -424,14 +551,16 @@ function feedServices (country, pageIndex) {
 				var service_banner_src = CDN_URI + "/images/service-banner/" + service.service.cname.toLowerCase() + ".png";
 				rowNode.append(
 					'<div class="col-3" data-aos="fade-down" data-aos-delay="'+AOSDelayByIndex(index)+'">' +
-						'<div class="card card-service text-dark bg-light mb-3" onClick="location.href=\''+ service.service.path +'\'">' +
-							'<img src="'+ service_banner_src +'" class="card-img-top p-3">' +
-							'<div class="card-body">' +
-								'<h5 class="card-title text-center">'+ service.service.name +'</h5>' +
-							'</div>' +
-							'<ul class="list-group list-group-flush">' +
-								'<li class="card-service-status list-group-item text-center">'+ statusLabelComponent(service.status.label) +'</li>' +
-							'</ul>' +
+						'<div class="card card-service text-dark bg-light mb-3" data-service-id="'+service.service.id+'">' +
+							'<a href="'+service.service.path+'" title="'+service.service.name+'" class="card-service-link">' +
+								'<img src="'+ service_banner_src +'" class="card-img-top p-3">' +
+								'<div class="card-body">' +
+									'<h5 class="card-title text-center">'+ service.service.name +'</h5>' +
+								'</div>' +
+								'<ul class="list-group list-group-flush">' +
+									'<li class="card-service-status list-group-item text-center">'+ statusLabelComponent(service.status.label) +'</li>' +
+								'</ul>' +
+							'</a>' +
 						'</div>' +
 					'</div>' 
 				);
@@ -446,4 +575,47 @@ function feedServices (country, pageIndex) {
 			console.error(err)
 		}
 	});
+}
+
+function feedServicePage(country_id, service_id){
+	$.ajax({
+		url: domainName + "/controllers/gateway.php",
+		data: {action: "current_status", country: country_id, service: service_id},
+		method: "GET",
+		timeout: 4000,
+		dataType: "json",
+		success: (responseData) => {
+			// Current Status
+			$('#page-status .service-status .service-status-current').addClass("text-"+statusClass(responseData.currentStatus.label));
+			$('#page-status .service-status .service-status-current .status-icon').append(statusIcon(responseData.currentStatus.label));
+			$('#page-status .service-status .service-status-current .status-label').append($.t('status.'+responseData.currentStatus.label));
+		
+			// Graph
+			const graph = new Chart(
+				document.getElementById('report24HGraph'), 
+				generateGraphConfig(responseData.stats24h, responseData.currentStatus.label)
+			);
+			
+		},
+		error: (err) => {
+			console.error(err)
+		}
+	});
+}
+
+function onSendReport(country_id, service_id){
+	$.post(
+		domainName + "/controllers/gateway.php?action=send_report", 
+		{country: country_id, service: service_id}, 
+		function(data, status){
+			if(status == 'success') {
+				data = JSON.parse(data);
+				console.log('send report', data.id, data.submittedAt);
+				
+				// Show Modal
+				createModal("modalConfirm", $.t('modal.confirm'), $.t('modal.textConfirmSendReport'));
+				(new bootstrap.Modal(document.getElementById('modalConfirm'))).show();
+			}
+		}
+	);
 }
