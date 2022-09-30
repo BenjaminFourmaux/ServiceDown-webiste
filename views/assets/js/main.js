@@ -548,7 +548,7 @@ function feedServices (country, pageIndex) {
 			// Browse Services
 			responseData.data.map((service) => {
 				index ++;
-				var service_banner_src = CDN_URI + "/images/service-banner/" + service.service.cname.toLowerCase() + ".png";
+				var service_banner_src = CDN_URI + "/images/service-banner/" + service.service.slug.toLowerCase() + ".png";
 				rowNode.append(
 					'<div class="col-3" data-aos="fade-down" data-aos-delay="'+AOSDelayByIndex(index)+'">' +
 						'<div class="card card-service text-dark bg-light mb-3" data-service-id="'+service.service.id+'">' +
