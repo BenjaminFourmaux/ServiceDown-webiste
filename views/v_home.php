@@ -151,10 +151,14 @@
 					
 					<div class="row">
 						<div class="col-4">
-							<object width="100%" type="image/svg+xml" data="https://gh-card.dev/repos/BenjaminFourmaux/ServiceDown-website.svg?link_target=_top"></object>
+							<a href="https://github.com/BenjaminFourmaux/ServiceDown-website" target="_blank">
+								<img src="https://gh-card.dev/repos/BenjaminFourmaux/ServiceDown-website.svg" style="width: 100%">
+							</a>
 						</div>
 						<div class="col-4">
-							<object width="100%" type="image/svg+xml" data="https://gh-card.dev/repos/BenjaminFourmaux/ServiceDown-api.svg?link_target=_top"></object>
+							<a href="https://github.com/BenjaminFourmaux/ServiceDown-api" target="_blank">
+								<img src="https://gh-card.dev/repos/BenjaminFourmaux/ServiceDown-api.svg" style="width: 100%">
+							</a>
 						</div>
 					</div>
 					

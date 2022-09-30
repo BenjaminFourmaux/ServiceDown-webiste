@@ -441,7 +441,7 @@ function feedCurrentOutage(rowNode, country){
 			rowNode.empty();
 			if (responseData.length > 0){
 				responseData.map((service) => {
-					var service_banner_src = CDN_URI + "/images/service-banner/" + service.service.cname.toLowerCase() + ".png";
+					var service_banner_src = CDN_URI + "/images/service-banner/" + service.service.slug.toLowerCase() + ".png";
 					
 					rowNode.append(
 						'<div class="col-3">' +

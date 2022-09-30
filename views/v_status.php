@@ -3,7 +3,7 @@
 		<div class="my-5">
 			<section class="service-info">
 				<div class="text-center">
-					<img src="<?=getenv('CDN_URI')?>images/service-banner/<?=$service['cname']?>.png">
+					<img src="<?=getenv('CDN_URI')?>images/service-banner/<?=$service['slug']?>.png">
 					<h1 class="service-info-title"><?=$service['name']?></h1>
 					<p class="service-info-description"><?=$service['description']?></p>
 					<div class="service-info-link">
