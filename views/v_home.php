@@ -151,6 +151,9 @@
 					
 					<div class="row">
 						<div class="col-4">
+							<object width="100%" type="image/svg+xml" data="https://gh-card.dev/repos/BenjaminFourmaux/ServiceDown-website.svg?link_target=_top"></object>
+						</div>
+						<div class="col-4">
 							<object width="100%" type="image/svg+xml" data="https://gh-card.dev/repos/BenjaminFourmaux/ServiceDown-api.svg?link_target=_top"></object>
 						</div>
 					</div>
