@@ -24,7 +24,7 @@
 		str_replace("{{name}}", $service['name'], $translate->t("pages.service.seo.keywords")),
 		str_replace("{{name}}", $service['name'], $translate->t("pages.service.seo.title")),
 		$WEBSITE_URI.$service['path'],
-		"https://cdn.service-down.net/website/img/generated?service_name=".strtolower($service['slug'])
+		"https://cdn.service-down.net/images/generated?service_name=".strtolower($service['slug'])
 	);
 	
 ?>

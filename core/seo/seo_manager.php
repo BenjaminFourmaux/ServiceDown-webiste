@@ -17,7 +17,9 @@
 			try {
 				foreach($this->jsonReadFile['pages'] as $row) {
 					if ($row['name'] === $pageName){
-						return new SEO_page($row);
+						$seoPage = new SEO_page($row);
+						$seoPage->generator = $this->jsonReadFile['generator']; 
+						return $seoPage;
 					}
 				}
 				return null;
@@ -32,7 +34,7 @@
 			$seoPage->name = $name;
 			$seoPage->description = $description;
 			$seoPage->keywords = $keywords;
-			$seoPage->generator = "Bootstrap 5 & FontAwesome 5";
+			$seoPage->generator = "Bootstrap 5";
 			$seoPage->theme_color = "#ff0000";
 			$seoPage->og_title = $title;
 			$seoPage->og_description = $description;
@@ -62,7 +64,6 @@
 				$this->name = $json['name'];
 				$this->description = $json['description'];
 				$this->keywords = $json['keywords'];
-				$this->generator = $json['generator'];
 				$this->theme_color = $json['theme_color'];
 				// Open Graph
 				$this->og_title = $json['og-title'];
