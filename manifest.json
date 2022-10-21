@@ -1,0 +1,16 @@
+{
+	"short_name": "Service Down",
+	"name": "Service Down",
+	"icons": [
+		{
+			"src": "img/views/assets/img/logo-v1-50x50.png",
+			"type": "image/png",
+			"sizes": "50x50"
+		}
+	],
+	"start_url": "/",
+	"background_color": "#ff0000",
+	"display": "standalone",
+	"scope": "/",
+	"theme_color": "#ff0000"
+}
