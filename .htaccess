@@ -1,0 +1,9 @@
+# Follow the symbolic links
+Options +FollowSymlinks 
+# Activation of the Rewrite Rule for Apache
+RewriteEngine On
+
+
+# Rewriting URL
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?controller=$1 [QSA,NC]
