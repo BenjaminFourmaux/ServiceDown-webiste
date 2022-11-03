@@ -194,5 +194,8 @@
 			"website": "Site Internet",
 			"twitter": "Profil Twitter"
 		}
+	},
+	"notifications": {
+		"alphaRelease": "Le site est actuellement en <strong>alpha</strong>.<br>Certaines fonctionnalitées peuvent être manquantes ou disfonctionner.<br> Merci de votre compréhension."
 	}
 }

@@ -1,3 +1,4 @@
+<!-- Footer -->
 <footer class="py-3 my-4 border-top">
 	<div class="container">
 		<div class="row py-4">
@@ -67,6 +68,48 @@
 		</div>
 	</div>
 </footer>
+
+<!-- Notifstack drawer -->
+<style>
+	#notifstack-drawer {
+		position: fixed;
+		bottom: 3em;
+		left: 1em;
+		width: 17em;
+	}
+	#notifstack-drawer .alert {
+		margin-right: auto;
+	}
+	#notifstack-drawer .alert.alert-warning {
+		background-color: var(--bs-warning);
+	}
+	#notifstack-drawer .notifstack-alert-icon {
+		text-align: center;
+		font-size: 2em;
+	}
+	#notifstack-drawer .notifstack-alert-body {
+		border-top: 2px solid grey;
+		font-size: 1.1em;
+		max-height: 210px;
+		overflow: auto;
+	}
+	#notifstack-drawer .notifstack-alert-body::-webkit-scrollbar-track {
+		background-color: lightgrey;
+	}
+	#notifstack-drawer .notifstack-alert-body::-webkit-scrollbar-thumb {
+		background-color: grey;
+	}
+</style>
+<div id="notifstack-drawer">
+	<div class="alert alert-warning align-items-center" role="alert" data-aos="fade-right" data-aos-duration="700">
+		<div class="notifstack-alert-icon">
+			<i class="fa-solid fa-triangle-exclamation"></i>
+		</div>
+		<div class="notifstack-alert-body">
+			<p data-i18n="[html]notifications.alphaRelease"></p>
+		</div>
+	</div>
+</div>
 
 <!-- Scroll to top -->
 <a href="#" id="scroll-top" class="scroll-top" aria-label="Arrow up" data-i18n="[title]action.scrollToTop">
