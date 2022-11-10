@@ -4,11 +4,39 @@
 const CDN_URI = window.location.protocol + "//cdn." + window.location.hostname;
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
+var notyf = undefined;
+
 
 $(document).ready(function() {
 	AOS.init();
+	
+	/* Notifications */
+	/* See documentation -> https://github.com/caroso1222/notyf */
+	notyf = new Notyf(
+		{
+			duration: 5000,
+			position: {
+				x: 'left',
+				y: 'bottom',
+			},
+			types: [
+				{
+					type: 'warning',
+					background: '#ffc107',
+					icon: {
+						className: 'fa-sharp fa-solid fa-triangle-exclamation',
+						tagName: 'i',
+						color: 'white',
+					}
+				}
+			]
+		}
+	);
+	
+	
 	// Remove loading screen
 	$('#loading_wrap').remove();
+	
 	
 	/* Scroll  */
 	$(window).scroll(function() {
@@ -67,6 +95,20 @@ const domainName = window.location.origin;
 if (!cookieExist('country')){
 	setCookieCountry(getCookie('lang'));
 } 
+
+/*- Notifications -*/
+document.onreadystatechange = () => {
+	if (document.readyState === 'complete') {
+		// Pre Release
+		notyf.open({
+			type: 'warning',
+			message: $.t('notifications.alphaRelease'),
+			duration: null,
+			ripple: false,
+		});
+	}
+};
+
 
 
 /** -- Functions -- **/
@@ -373,6 +415,13 @@ function createModal(nodeId, title, body){
 	);
 }
 
+function displayAPIError(){
+	notyf.error($.t('errors.api_connection'));
+}
+function getTranslate(translateKey){
+	return $.t(translateKey);
+}
+
 
 /** -- Ajax Func -- **/
 function feedCountryList(node){
@@ -419,6 +468,7 @@ function search(query){
 		},
 		error: (err) => {
 			console.error('API error :',err.status , err.responseText);
+			displayAPIError();
 		}
 	});
 }
@@ -475,6 +525,7 @@ function feedCurrentOutage(rowNode, country){
 						"<h4>"+$.t('pages.home.sections.services.noService')+"</h4>" +
 					'</div>'
 				);
+			displayAPIError();
 		}
 	})
 }
@@ -572,7 +623,8 @@ function feedServices (country, pageIndex) {
 			$('#page-services #page-body section').removeAttr('style');
 		},
 		error: (err) => {
-			console.error(err)
+			console.error(err);
+			displayAPIError();
 		}
 	});
 }
@@ -598,7 +650,8 @@ function feedServicePage(country_id, service_id){
 			
 		},
 		error: (err) => {
-			console.error(err)
+			console.error(err);
+			displayAPIError();
 		}
 	});
 }
