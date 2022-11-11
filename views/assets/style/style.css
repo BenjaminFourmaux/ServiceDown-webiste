@@ -397,6 +397,45 @@ header .search-result {
 	color: var(--sd-color-red);
 }
 
+
+/** ----------
+	NotifStack
+	-------- **/
+#notifstack-drawer {
+	z-index: 1001;
+	position: fixed;
+	bottom: 3em;
+	left: 1em;
+	width: 16em;
+}
+#notifstack-drawer .alert {
+	margin-right: auto;
+}
+#notifstack-drawer .alert.alert-warning {
+	background-color: var(--bs-warning);
+}
+#notifstack-drawer .notifstack-alert-icon {
+	text-align: center;
+	font-size: 2em;
+}
+#notifstack-drawer .notifstack-alert-body {
+	border-top: 2px solid grey;
+	font-size: 1.1em;
+	max-height: 210px;
+	overflow: auto;
+}
+#notifstack-drawer .notifstack-alert-body p:last-child {
+	margin-bottom: 0rem;
+}
+#notifstack-drawer .notifstack-alert-body::-webkit-scrollbar-track {
+	background-color: lightgrey;
+}
+#notifstack-drawer .notifstack-alert-body::-webkit-scrollbar-thumb {
+	background-color: grey;
+}
+
+
+
 /** --------- 
 	Keyframes 
 	---------- */

@@ -69,7 +69,6 @@
 	</div>
 </footer>
 
-
 <!-- Scroll to top -->
 <a href="#" id="scroll-top" class="scroll-top" aria-label="Arrow up" data-i18n="[title]action.scrollToTop">
 	<i class="fas fa-arrow-up"></i>
