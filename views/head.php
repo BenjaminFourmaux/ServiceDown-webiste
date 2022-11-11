@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<link rel="stylesheet" href="<?=$WEBSITE_URI?>/views/assets/style/style.css" />
+	<link rel="stylesheet" href="<?=getenv('CDN_URI')?>css/notyf/notyf.min.css">
 	<!-- JS -->
 	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 	<script src="<?=$WEBSITE_URI?>/views/assets/js/main.js"></script>
@@ -29,4 +30,5 @@
 	<script src="<?=getenv('CDN_URI')?>js/i18n/jquery-i18next-1.2.1.min.js"></script>
 	<script src="<?=getenv('CDN_URI')?>js/i18n/i18nextBrowserLanguageDetector-6.1.3.min.js"></script>
 	<script src="<?=getenv('CDN_URI')?>js/i18n/i18n.js"></script>
+	<script src="<?=getenv('CDN_URI')?>js/notyf/notyf.min.js"></script>
 </head>

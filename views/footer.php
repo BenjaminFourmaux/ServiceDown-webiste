@@ -69,18 +69,6 @@
 	</div>
 </footer>
 
-<!-- Notifstack drawer -->
-<div id="notifstack-drawer">
-	<div class="alert alert-warning align-items-center" role="alert" data-aos="fade-right" data-aos-duration="700">
-		<div class="notifstack-alert-icon">
-			<i class="fa-solid fa-triangle-exclamation"></i>
-		</div>
-		<div class="notifstack-alert-body">
-			<p data-i18n="[html]notifications.alphaRelease"></p>
-		</div>
-	</div>
-</div>
-
 <!-- Scroll to top -->
 <a href="#" id="scroll-top" class="scroll-top" aria-label="Arrow up" data-i18n="[title]action.scrollToTop">
 	<i class="fas fa-arrow-up"></i>
