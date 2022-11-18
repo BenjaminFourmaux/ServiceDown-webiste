@@ -2,7 +2,7 @@
 <footer class="py-3 my-4 border-top">
 	<div class="container">
 		<div class="row py-4">
-			<div class="col-6 col-md-2">
+			<div class="col-2">
 				<h5 data-i18n>footer.sections.0.title</h5>
 				<ul class="nav flex-column">
 					<li class="nav-item mb-2">
@@ -16,7 +16,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="col-6 col-md-2">
+			<div class="col-2">
 				<h5 data-i18n>footer.sections.1.title</h5>
 				<ul class="nav flex-column">
 					<li class="nav-item mb-2">
@@ -30,7 +30,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="col-6 col-md-2">
+			<div class="col-2">
 				<h5 data-i18n>footer.sections.2.title</h5>
 				<ul class="nav flex-column">
 					<li class="nav-item mb-2">
@@ -41,7 +41,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="col-md-4 offset-1">
+			<div class="col-4 offset-1">
 			</div>
 		</div>
 		
