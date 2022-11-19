@@ -30,7 +30,7 @@
 				<div class="row align-items-center mt-5 g-4">
 					
 					<!-- What is -->
-					<div class="col-6" id="<?=$keyArray[0]?>" data-aos="fade-right">
+					<div class="col-12 col-md-6" id="<?=$keyArray[0]?>" data-aos="fade-right">
 						<h3 class="mb-4" data-i18n>pages.about.sect.0.title</h3>
 						<p 
 							data-i18n="[html]pages.about.sect.0.body"
@@ -39,15 +39,15 @@
 							pages.about.sect.0.body
 						</p>
 					</div>
-					<div class="col-6" data-aos="flip-left">
+					<div class="col-12 col-md-6"" data-aos="flip-left">
 						<img src="views/assets/img/about-hero-whatis.png" class="w-100">
 					</div>
 					
 					<!-- Open Source -->
-					<div class="col-6" data-aos="flip-right">
+					<div class="col-12 col-md-6"" data-aos="flip-right">
 						<img src="views/assets/img/about-hero-opensource.png" class="w-100">
 					</div>
-					<div class="col-6" id="<?=$keyArray[1]?>" data-aos="fade-left">
+					<div class="col-12 col-md-6"" id="<?=$keyArray[1]?>" data-aos="fade-left">
 						<h3 class="mb" data-i18n>pages.about.sect.1.title</h3>
 						<p 
 							data-i18n="[html]pages.about.sect.1.body"
@@ -58,7 +58,7 @@
 					</div>
 					
 					<!-- Works -->
-					<div class="col-6" id="<?=$keyArray[2]?>"  data-aos="fade-right">
+					<div class="col-12 col-md-6"" id="<?=$keyArray[2]?>"  data-aos="fade-right">
 						<h3 class="mb-4" data-i18n>pages.about.sect.2.title</h3>
 						<h4 data-i18n>pages.about.sect.2.subtitle-1</h4>
 						<p>
@@ -81,7 +81,7 @@
 						<p data-i18n="[html]pages.about.sect.2.text-2">pages.about.sect.2.text-2</p>
 						<p data-i18n>pages.about.sect.2.end</p>
 					</div>
-					<div class="col-6" data-aos="flip-left">
+					<div class="col-12 col-md-6"" data-aos="flip-left">
 						<img src="views/assets/img/about-hero-works-1.png" class="w-100">
 						<img src="views/assets/img/about-hero-works-2.png" class="w-100">
 					</div>
@@ -91,7 +91,7 @@
 						<h3 class="text-center mb-4" data-i18n>pages.about.sect.3.title</h3>
 						<p class="text-center" data-i18n>pages.about.sect.3.body</p>
 						<div class="row justify-content-center mt-4">
-							<div class="col-2">
+							<div class="col-4 col-md-2">
 								<div class="icon-card" data-aos="zoom-in" data-aos-delay="300">
 									<div class="icon">
 										<i class="fa-solid fa-wifi"></i>
@@ -101,7 +101,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-2">
+							<div class="col-4 col-md-2">
 								<div class="icon-card" data-aos="zoom-in" data-aos-delay="600">
 									<div class="icon">
 										<i class="fa-solid fa-users"></i>
@@ -111,7 +111,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-2">
+							<div class="col-4 col-md-2">
 								<div class="icon-card" data-aos="zoom-in" data-aos-delay="900">
 									<div class="icon">
 										<i class="fa-solid fa-gamepad"></i>
@@ -121,7 +121,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-2">
+							<div class="col-4 col-md-2">
 								<div class="icon-card" data-aos="zoom-in" data-aos-delay="1200">
 									<div class="icon">
 										<i class="fa-solid fa-network-wired"></i>
@@ -131,7 +131,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-2">
+							<div class="col-4 col-md-2">
 								<div class="icon-card" data-aos="zoom-in" data-aos-delay="1500">
 									<div class="icon">
 										<i class="fa-solid fa-building-columns"></i>
@@ -141,7 +141,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-2">
+							<div class="col-4 col-md-2">
 								<div class="icon-card" data-aos="zoom-in" data-aos-delay="1800">
 									<div class="icon">
 										<i class="fa-solid fa-basket-shopping"></i>
@@ -158,7 +158,7 @@
 					<div class="col-12" id="<?=$keyArray[4]?>">
 						<h3 class="text-center mb-4" data-i18n>pages.about.sect.4.title</h3>
 						<div class="row justify-content-center mt-4">
-							<div class="col-3">
+							<div class="col-6 col-md-3">
 								<div class="icon-card" data-aos="zoom-in" data-aos-delay="300">
 									<div class="icon">
 										<i class="fa-solid fa-server"></i>
@@ -169,7 +169,7 @@
 									<p data-i18n>pages.about.sect.4.items.0.caption</p>
 								</div>
 							</div>
-							<div class="col-3">
+							<div class="col-6 col-md-3">
 								<div class="icon-card" data-aos="zoom-in" data-aos-delay="600">
 									<div class="icon">
 										<i class="fa-solid fa-globe"></i>

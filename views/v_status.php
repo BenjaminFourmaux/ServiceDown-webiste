@@ -50,7 +50,7 @@
 					<!-- Report H1 graph -->
 					<div class="col-12">
 						<h5 data-i18n>pages.service.currentStatus.graph.title</h5>
-						<div class="m-3">
+						<div class="m-md-3">
 							<canvas id="report24HGraph"></canvas>
 						</div>
 					</div>

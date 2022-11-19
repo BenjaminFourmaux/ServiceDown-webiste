@@ -7,6 +7,9 @@
 
 /* [SM] Small devices (landscape phones, less than 768px) */
 @media (max-width: 768px) { 
+	header .nav {
+		margin-left: auto;
+	}
 	.banner-page {
 		height: 130px;
 	}
@@ -16,5 +19,8 @@
 	}
 	.card-service h5.card-title {
 		font-size: 1rem;
+	}
+	#page-about .body-page p {
+		font-size: 15px;
 	}
 }
