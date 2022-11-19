@@ -1,0 +1,20 @@
+/** Media.css **/
+
+/* [] Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+	
+}
+
+/* [SM] Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) { 
+	.banner-page {
+		height: 130px;
+	}
+	.banner-page-inner {
+		padding-top: calc(var(--banner-page-padding-y) / 2);
+		padding-bottom: calc(var(--banner-page-padding-y) / 2);
+	}
+	.card-service h5.card-title {
+		font-size: 1rem;
+	}
+}
