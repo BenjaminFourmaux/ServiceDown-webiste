@@ -56,6 +56,7 @@ $(document).ready(function() {
 	
 	/* - Feed - */
 	
+	/* Select country */
 	if($('#selectCountry').length){
 		$('#selectCountry').change(()=> {
 			selectedValue = $(this).find(':selected').val();
@@ -68,14 +69,17 @@ $(document).ready(function() {
 		feedCountryList($('#selectCountry'));
 	}
 	
+	/* Current outage services (home) */
 	if ($('#current-outage-service').length){
 		feedCurrentOutage($('#current-outage-service'), matchCountry(getCookie('country')));
 	}
 	
+	/* Services list */
 	if ($('#page-services').length){
 		feedServices(matchCountry(getCookie('country')), pagingUrlParameter());
 	}
 	
+	/* Service */
 	if ($('#page-status').length){
 		serviceId =  parseInt($('#page-status').attr('data-service-id'));
 		countryId = matchCountry(getCookie('country'));
@@ -494,7 +498,7 @@ function feedCurrentOutage(rowNode, country){
 					var service_banner_src = CDN_URI + "/images/service-banner/" + service.service.slug.toLowerCase() + ".png";
 					
 					rowNode.append(
-						'<div class="col-3">' +
+						'<div class="col-6 col-md-3">' +
 							'<div class="card card-service text-dark bg-light mb-3" data-service-id="'+service.service.id+'">' +
 								'<a href="'+service.service.path+'" title="'+service.service.name+'" class="card-service-link">' +
 									'<img src="'+ service_banner_src +'" class="card-img-top p-3">' +
@@ -601,7 +605,7 @@ function feedServices (country, pageIndex) {
 				index ++;
 				var service_banner_src = CDN_URI + "/images/service-banner/" + service.service.slug.toLowerCase() + ".png";
 				rowNode.append(
-					'<div class="col-3" data-aos="fade-down" data-aos-delay="'+AOSDelayByIndex(index)+'">' +
+					'<div class="col-6 col-md-3" data-aos="fade-down" data-aos-delay="'+AOSDelayByIndex(index)+'">' +
 						'<div class="card card-service text-dark bg-light mb-3" data-service-id="'+service.service.id+'">' +
 							'<a href="'+service.service.path+'" title="'+service.service.name+'" class="card-service-link">' +
 								'<img src="'+ service_banner_src +'" class="card-img-top p-3">' +
