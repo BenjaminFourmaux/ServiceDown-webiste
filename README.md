@@ -57,6 +57,15 @@ List of dependance used on this website :
 - :crown: [Benjamin Fourmaux](https://github.com/BenjaminFourmaux)
 - :man_technologist: [CharlyDFlex](https://github.com/CharlyDFlex)
 
+## Licence
+All Service Down project's is under [**Apache License v2**](https://www.apache.org/licenses/LICENSE-2.0).
+You can:
+- Reuse the code 
+- Modified the code
+- Build the code
+
+You must **Mention** the © Copyright if you use and modified code for your own profit. Thank you
+
 ## Supporting
 If you like this project and if you want, make a donation
 
