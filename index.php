@@ -55,6 +55,9 @@
 		case 'login':
 			require('controllers/c_login.php');
 			break;
+		case 'contact':
+			require('controllers/c_contact.php');
+			break;
 		case !"": // 404 not found
 			http_response_code(404);
 			include('views/error-404.html');
