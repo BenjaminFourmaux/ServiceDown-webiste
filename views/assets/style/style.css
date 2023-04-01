@@ -257,6 +257,11 @@ header .search-result {
 	overflow-y: auto;
 }
 
+/* Footer */
+footer .footer-banner {
+	width: 100%;
+}
+
 
 
 /** ------

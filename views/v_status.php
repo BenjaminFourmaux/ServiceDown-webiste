@@ -64,7 +64,7 @@
 					
 					<div class="col-12"><hr></div>
 					
-					<!-- Report H1 graph -->
+					<!-- Report 24H graph -->
 					<div class="col-12">
 						<h5 data-i18n>pages.service.currentStatus.graph.title</h5>
 						<div class="m-md-3">

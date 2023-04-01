@@ -42,6 +42,7 @@
 				</ul>
 			</div>
 			<div class="col-md-4 offset-1">
+				<img class="footer-banner" src="<?=$WEBSITE_URI?>/views/assets/img/footer_banner.png">
 			</div>
 		</div>
 		
