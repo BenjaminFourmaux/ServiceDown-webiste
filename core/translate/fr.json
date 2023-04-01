@@ -1,9 +1,11 @@
 {
-	"websiteTitle":"Service Down - État des Services",
+	"websiteTitle":"Service Down - État des Services en ligne",
 	"nav": {
 		"home": "Home",
 		"services": "Services",
+		"tools": "Outils",
 		"api": "API",
+		"dashboard": "dashboard",
 		"about": "A propos"
 	},
 	"footer": {

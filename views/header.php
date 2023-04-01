@@ -2,7 +2,9 @@
 	$navItems = [
 		"home",
 		"services",
+		"tools",
 		"api",
+		"dashboard",
 		"about",
 	];
 	$selectedClass = "disabled";
@@ -24,10 +26,17 @@
 			
 			<div class="collapse navbar-collapse d-md-flex align-items-center" id="navbarNav">
 				<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-					<li><a href="/" class="nav-link px-2 <?php if($navItems[0]==$controller || $controller ==""){echo $selectedClass;}?>" data-i18n="[title]nav.<?=$navItems[0]?>;nav.<?=$navItems[0]?>">nav.<?=$navItems[0]?></a></li>
-					<li><a href="/services" class="nav-link px-2 <?php if($navItems[1]==$controller){echo $selectedClass;}?>" data-i18n="[title]nav.<?=$navItems[1]?>;nav.<?=$navItems[1]?>">nav.<?=$navItems[1]?></a></li>
-					<li><a href="#" class="nav-link px-2 <?php if($navItems[2]==$controller){echo $selectedClass;}?>" data-i18n="[title]nav.<?=$navItems[2]?>;nav.<?=$navItems[2]?>">nav.<?=$navItems[2]?></a></li>
-					<li><a href="/about" class="nav-link px-2 <?php if($navItems[3]==$controller){echo $selectedClass;}?>" data-i18n="[title]nav.<?=$navItems[3]?>;nav.<?=$navItems[3]?>">nav.<?=$navItems[3]?></a></li>
+					<li class="nav-item"><a href="/" class="nav-link px-2 <?php if($navItems[0]==$controller || $controller ==""){echo $selectedClass;}?>" data-i18n="[title]nav.<?=$navItems[0]?>;nav.<?=$navItems[0]?>">nav.<?=$navItems[0]?></a></li>
+					<li class="nav-item"><a href="/services" class="nav-link px-2 <?php if($navItems[1]==$controller){echo $selectedClass;}?>" data-i18n="[title]nav.<?=$navItems[1]?>;nav.<?=$navItems[1]?>">nav.<?=$navItems[1]?></a></li>
+					<li class="nav-item dropdown">
+						<a href="#" id="toolsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link px-2 dropdown-toggle" data-i18n="[title]nav.<?=$navItems[2]?>;nav.<?=$navItems[2]?>">nav.<?=$navItems[2]?>
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="toolsDropdown">
+							<li><a class="dropdown-item" href="/api" data-i18n="[title]nav.<?=$navItems[3]?>"><i class="fa-solid fa-server"></i> <span data-i18n>nav.<?=$navItems[3]?></span></a></li>
+							<li><a class="dropdown-item" href="https://dashboard.service-down.net/" data-i18n="[title]nav.<?=$navItems[4]?>"><i class="fa-solid fa-gauge"></i> <span data-i18n>nav.<?=$navItems[4]?></span></a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a href="/about" class="nav-link px-2 <?php if($navItems[5]==$controller){echo $selectedClass;}?>" data-i18n="[title]nav.<?=$navItems[5]?>;nav.<?=$navItems[5]?>">nav.<?=$navItems[5]?></a></li>
 				</ul>
 		
 				<!-- Search nav bar -->
