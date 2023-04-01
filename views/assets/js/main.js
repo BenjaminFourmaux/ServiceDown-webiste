@@ -23,10 +23,11 @@ $(document).ready(function() {
 				{
 					type: 'warning',
 					background: '#ffc107',
+					className: "notyf-warning",
 					icon: {
 						className: 'fa-sharp fa-solid fa-triangle-exclamation',
 						tagName: 'i',
-						color: 'white',
+						color: 'black',
 					}
 				}
 			]

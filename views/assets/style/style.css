@@ -20,6 +20,9 @@
 .text-sd-yellow {
 	color: var(--sd-color-yellow)!important;
 }
+.notyf-warning {
+	color: black;
+}
 
 /* Scroll Bar */
 html {
