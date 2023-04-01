@@ -20,6 +20,9 @@
 .text-sd-yellow {
 	color: var(--sd-color-yellow)!important;
 }
+.border-left-grey {
+	border-left: 1px solid var(--sd-color-grey);
+}
 .notyf-warning {
 	color: black;
 }
@@ -269,7 +272,7 @@ header .search-result {
     padding-bottom: calc(var(--banner-page-padding-y) * 2);
 }
 
-/* Ariane my love <3*/
+/* Ariane my love <3 */
 .file-ariane {
 	display: flex;
     flex-direction: row;
@@ -356,6 +359,9 @@ header .search-result {
 	border: var(--border-default);
 	border-radius: 0.50em;
 	padding: 1em;
+}
+#page-status .service-info img {
+	background: white;
 }
 #page-status .service-info .service-info-title {
 	margin: 0.30em 0;

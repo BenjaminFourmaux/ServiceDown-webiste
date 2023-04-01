@@ -33,15 +33,32 @@
 			</section>
 			<section class="service-status">
 				<div class="row">
-					<div class="col-12">
-						<h3 data-i18n>pages.service.currentStatus.title</h3>
-					</div>
 					
 					<!-- Current status -->
-					<div class="col-12">
+					<div class="col-8">
+						<h3 data-i18n>pages.service.currentStatus.title</h3>
 						<div class="service-status-current text-center">
 							<h4 class="status-icon"></h4>
 							<p class="status-label"></p>
+						</div>
+					</div>
+					
+					<!-- Send report -->
+					<div class="col-4 border-left-grey">
+						<h3 data-i18n>Signaler</h3>
+						<div class="service-status-send text-center">
+							<p data-i18n="pages.service.currentStatus.send.disclaimer" data-i18n-options='{"name": "<?=$service['name']?>"}'>pages.service.currentStatus.send.disclaimer</p>
+							<button 
+								id="send-report"
+								class="btn btn-warning btn-lg" 
+								data-i18n="[title]pages.service.currentStatus.send.button"
+							>
+								<i class="fa-solid fa-fire"></i>
+								<span data-i18n="pages.service.currentStatus.send.button">
+									pages.service.currentStatus.send.button
+								</span>
+								
+							</button>
 						</div>
 					</div>
 					
@@ -55,21 +72,6 @@
 						</div>
 					</div>
 					
-					<div class="col-12"><hr></div>
-					
-					<!-- Send report -->
-					<div class="col-12">
-						<div class="service-status-send text-center">
-							<p data-i18n="pages.service.currentStatus.send.disclaimer" data-i18n-options='{"name": "<?=$service['name']?>"}'>pages.service.currentStatus.send.disclaimer</p>
-							<button 
-								id="send-report"
-								class="btn btn-warning btn-lg" 
-								data-i18n="[title]pages.service.currentStatus.send.button;pages.service.currentStatus.send.button"
-							>
-								pages.service.currentStatus.send.button
-							</button>
-						</div>
-					</div>
 				</div>
 			</section>
 		</div>

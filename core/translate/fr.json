@@ -148,7 +148,7 @@
 					"title": "Nombre de signalement au cours des dernières 24 heures"
 				},
 				"send": {
-					"disclaimer": "Vous rencontrez un problème avec {{name}} ? Site qui ne fonctionne pas ? Problème de connexion ? Alors signalé le grâce au bouton ci-dessous",
+					"disclaimer": "Vous rencontrez un problème avec {{name}} ? Site qui ne fonctionne pas ? Problème de connexion ? Alors signalez le grâce au bouton ci-dessous.",
 					"button": "Signaler"
 				}
 			}
