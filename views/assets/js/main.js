@@ -300,7 +300,9 @@ function generateGraphConfig(stats, statusLabel){
 				y: {
 					beginAtZero: true,
 					ticks: {
-						color: "white"
+						color: "white",
+						stepSize: 1,
+						beginAtZero: true
 					},
 					grid: {
 						color: "#424345"
@@ -523,7 +525,7 @@ function feedCurrentOutage(rowNode, country){
 			}
 		},
 		error: (err) => {
-			console.error('API error :', err);
+			console.error('API error =>', err.responseText);
 			rowNode.empty();
 			rowNode.append(
 					'<div class="col-12 text-center">' +
@@ -628,7 +630,7 @@ function feedServices (country, pageIndex) {
 			$('#page-services #page-body section').removeAttr('style');
 		},
 		error: (err) => {
-			console.error(err);
+			console.error('API error =>', err.responseText);
 			displayAPIError();
 		}
 	});
@@ -655,7 +657,7 @@ function feedServicePage(country_id, service_id){
 			
 		},
 		error: (err) => {
-			console.error(err);
+			console.error('API error =>', err.responseText);
 			displayAPIError();
 		}
 	});
