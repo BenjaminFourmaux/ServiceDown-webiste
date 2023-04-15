@@ -2,7 +2,7 @@
 Webiste of ServiceDown project
 \
 [![](https://badgen.net/badge/Service/Down/red)]()
-[![](https://img.shields.io/badge/php-7.4-blue?logo=php&logoColor=white)]()
+[![](https://img.shields.io/badge/php-8.4-blue?logo=php&logoColor=white)]()
 [![](https://img.shields.io/badge/Bootstrap-5-blueviolet?logo=bootstrap&logoColor=blueviolet)]()
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
