@@ -2,11 +2,9 @@
 	/* Index Controller */
 	
 	/** Import **/
-	require_once('core/modules/dotEnv/DotEnv.php');
-	(new DotEnv('.env'))->load();
+	require_once('core/modules/dotEnv/DotEnv.php'); new DotEnv();
 	require_once("core/translate/translate.php");
 	require_once("core/seo/seo_manager.php");
-	
 	
 	/*** Cookies management ***/
 	if (isset($_COOKIE['lang'])){$translate = new Translate($_COOKIE['lang']);}else{
@@ -33,7 +31,7 @@
 	
 	
 	/*** Super global variables ***/
-	$WEBSITE_URI = stripos($_SERVER['SERVER_PROTOCOL'],'https') === 0 ? 'https://' : 'http://' . $_SERVER['HTTP_HOST'];
+	$WEBSITE_URI = (trim(getenv("ENVIRONMENT")) == "local" ? 'http://' : 'https://' ) . $_SERVER['HTTP_HOST'];
 	$SEO_MANAGER = new SEO_manager();
 	
 	
@@ -63,5 +61,4 @@
 			require('controllers/c_home.php');
 			break;
 	}
-
 ?>
