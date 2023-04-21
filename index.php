@@ -2,7 +2,7 @@
 	/* Index Controller */
 	
 	/** Import **/
-	require_once('core/modules/dotEnv/DotEnv.php'); new DotEnv();
+	require_once("core/modules/dotenv/DotEnv.php"); new DotEnv();
 	require_once("core/translate/translate.php");
 	require_once("core/seo/seo_manager.php");
 	

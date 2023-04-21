@@ -1,12 +1,11 @@
 # Follow the symbolic links
-Options +FollowSymlinks 
+# Options +FollowSymlinks 
 # Activation of the Rewrite Rule for Apache
 RewriteEngine On
 
-# Force to HTTPS
-#RewriteCond %{HTTPS} off
-#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L,NE,QSA]
-
-# Rewriting URL
+## -------------------------------------
+## Rewriting URL with controller name
+## -------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ index.php?controller=$1 [QSA,NC]
+RewriteRule (.*) index.php?controller=$1 [NC,QSA]
