@@ -13,7 +13,7 @@
 <!-- Nav Bar -->
 <header class="p-3 bg-dark text-white">
     <div class="container">
-		<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+		<div class="d-flex flex-wrap align-items-center justify-content-between justify-content-md-center justify-content-lg-start">
 		
 			<a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
 				<img src="<?=$WEBSITE_URI?>/views/assets/img/logo-v1-50x50.png" alt="logo-service-down">
@@ -49,7 +49,7 @@
 				
 				
 				<!-- Login button -->
-				<div class="text-end">
+				<div class="text-md-end text-center">
 					<a type="button" class="btn btn-warning disabled" href="login"><i class="fa-solid fa-arrow-right-to-bracket"></i> <span data-i18n>action.login</span></a>
 				</div>
 			</div>

@@ -23,6 +23,9 @@
 .border-left-grey {
 	border-left: 1px solid var(--sd-color-grey);
 }
+.border-top-grey-sm {
+	border-top: none;
+}
 .notyf-warning {
 	color: black;
 }
@@ -359,6 +362,9 @@ footer .footer-banner {
 /** Service **/
 #page-status section {
 	margin: 2em 0;
+}
+#page-status section .row *[class^="col-"] {
+	padding: 8px;
 }
 #page-status .service-info {
 	border: var(--border-default);

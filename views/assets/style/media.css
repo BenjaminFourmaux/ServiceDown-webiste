@@ -7,6 +7,13 @@
 
 /* [SM] Small devices (landscape phones, less than 768px) */
 @media (max-width: 768px) { 
+	.border-left-grey {
+		border-left: none;
+	}
+	.border-top-grey-sm {
+		border-top: 1px solid var(--sd-color-grey);
+	}
+
 	header .nav {
 		margin-left: auto;
 	}
@@ -22,5 +29,9 @@
 	}
 	#page-about .body-page p {
 		font-size: 15px;
+	}
+	
+	#page-status .service-info img {
+		width: 50%;
 	}
 }

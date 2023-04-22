@@ -35,7 +35,7 @@
 				<div class="row">
 					
 					<!-- Current status -->
-					<div class="col-8">
+					<div class="col-md-8 col-12">
 						<h3 data-i18n>pages.service.currentStatus.title</h3>
 						<div class="service-status-current text-center">
 							<h4 class="status-icon"></h4>
@@ -44,7 +44,7 @@
 					</div>
 					
 					<!-- Send report -->
-					<div class="col-4 border-left-grey">
+					<div class="col-md-4 col-12 border-left-grey border-top-grey-sm">
 						<h3 data-i18n>Signaler</h3>
 						<div class="service-status-send text-center">
 							<p data-i18n="pages.service.currentStatus.send.disclaimer" data-i18n-options='{"name": "<?=$service['name']?>"}'>pages.service.currentStatus.send.disclaimer</p>
