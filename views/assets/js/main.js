@@ -279,7 +279,11 @@ function generateGraphConfig(stats, statusLabel){
 		var datePast = new Date();
 		datePast.setHours(currentDateTime.getHours() - i);
 		
-		labels.push(datePast.getHours().toString()+":"+datePast.getMinutes().toString().padStart(2, "0"));
+		labels.push(
+			datePast.getHours().toString().padStart(2, "0")+ // Hours
+			":"+
+			datePast.getMinutes().toString().padStart(2, "0") // Minutes
+		);
 	}
 	
 	const data = {
