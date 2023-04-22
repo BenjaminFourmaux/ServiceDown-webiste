@@ -303,10 +303,10 @@ function generateGraphConfig(stats, statusLabel){
 			scales: {
 				y: {
 					beginAtZero: true,
+					suggestedMax: 10,
 					ticks: {
 						color: "white",
-						stepSize: 1,
-						beginAtZero: true
+						stepSize: 1
 					},
 					grid: {
 						color: "#424345"
