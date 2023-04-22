@@ -4,8 +4,7 @@
 	***********************/
 	
 	/* Require */
-	require_once('../core/modules/dotEnv/DotEnv.php');
-	new DotEnv('../');
+	require_once('../core/modules/dotenv/DotEnv.php'); new DotEnv('../');
 	require_once('../core/modules/request/request.php');
 	/** Require : Models **/
 	require_once('../models/m_country.php'); $CountryClass = new Country();

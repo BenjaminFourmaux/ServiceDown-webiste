@@ -1,14 +1,15 @@
 <?php
 	/** Status controller **/
+	
 	require_once('core/modules/request/request.php');
 	
-	// Check if service exist 
-	$response = (
-		new Request($WEBSITE_URI."/controllers/gateway.php?action=service_id_by_path&country=".$_COOKIE['country']."&q=/status/".$urlArgs[0])
-	)->get();
+	include('controllers/embed_gateway.php');
 	
+	// Check if service exist 
+	$response = get_service_id_by_path($_COOKIE['country'], "/status/".$urlArgs[0]);
+
 	// If service not found raise 404 error
-	if($response == "Resource not Available : 404"){
+	if($response == "Resource not Available : 404" || $response == "Resource not Available : 403"){
 		http_response_code(404);
 		include('views/error-404.html');
 		exit();

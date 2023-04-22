@@ -1,7 +1,8 @@
 /****************
 *	Main.js		*
 ****************/
-const CDN_URI = window.location.protocol + "//cdn." + window.location.hostname;
+const GATEWAY_URI = window.location.origin + "/controllers/gateway.php";
+const CDN_URI = window.location.protocol + "//cdn.service-down.net";
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 var notyf = undefined;
@@ -95,7 +96,6 @@ $(document).ready(function() {
 
 /** ---- Main Thread ---- **/
 
-const domainName = window.location.origin;
 // Set Country selected cookie if not exist
 if (!cookieExist('country')){
 	setCookieCountry(getCookie('lang'));
@@ -434,7 +434,7 @@ function getTranslate(translateKey){
 function feedCountryList(node){
 	countrySelectedId = matchCountry(getCookie('country'));
 	$.ajax({
-		url: domainName + "/controllers/gateway.php",
+		url: GATEWAY_URI,
 		data: {action: "country_list"},
 		method: "GET",
 		dataType: "json",
@@ -455,7 +455,7 @@ function feedCountryList(node){
 
 function search(query){
 	$.ajax({
-		url: domainName + "/controllers/gateway.php",
+		url: GATEWAY_URI,
 		data: {action: "search", q: query},
 		method: "GET",
 		dataType: "json",
@@ -489,7 +489,7 @@ function feedCurrentOutage(rowNode, country){
 	);
 	
 	$.ajax({
-		url: domainName + "/controllers/gateway.php",
+		url: GATEWAY_URI,
 		data: {action: "current_outage", country: country, count: 8},
 		method: "GET",
 		timeout: 4000,
@@ -550,7 +550,7 @@ function feedServices (country, pageIndex) {
 	)
 	
 	$.ajax({
-		url: domainName + "/controllers/gateway.php",
+		url: GATEWAY_URI,
 		data: {action: "services", country: country, pageIndex: pageIndex},
 		method: "GET",
 		timeout: 4000,
@@ -638,7 +638,7 @@ function feedServices (country, pageIndex) {
 
 function feedServicePage(country_id, service_id){
 	$.ajax({
-		url: domainName + "/controllers/gateway.php",
+		url: GATEWAY_URI,
 		data: {action: "current_status", country: country_id, service: service_id},
 		method: "GET",
 		timeout: 4000,
@@ -665,7 +665,7 @@ function feedServicePage(country_id, service_id){
 
 function onSendReport(country_id, service_id){
 	$.post(
-		domainName + "/controllers/gateway.php?action=send_report", 
+		GATEWAY_URI + "?action=send_report", 
 		{country: country_id, service: service_id}, 
 		function(data, status){
 			if(status == 'success') {

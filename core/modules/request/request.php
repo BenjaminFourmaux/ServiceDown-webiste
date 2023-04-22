@@ -28,8 +28,8 @@
 				if($http_code == intval(200)){
 					$response = $content;
 				}
-				else{
-					echo "Resource not Available : " . $http_code;
+				else {
+					$response = "Resource not Available : " . $http_code;
 				}
 				
 			} catch (Exception $ex) {
