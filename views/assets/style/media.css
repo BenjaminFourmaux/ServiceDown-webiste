@@ -1,8 +1,57 @@
 /** Media.css **/
 
+@media (max-width: 375px) {
+	#page-contact .contact_top .contact_header {
+		font-size: 25px;
+	}
+}
+
 /* [] Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
 	
+}
+
+@media (max-width: 576px){
+	#page-contact .contact_top_sec {
+      margin: 0px 20px;
+    }
+	#page-contact .contact_top .contact_header {
+		font-size: 30px;
+	}
+	#page-contact .contact_top .contact_text {
+		margin: 20px 0px;
+		font-size: 16px;
+	}
+	#page-contact .contact_top_sec .contact_form {
+		border-radius: 0px;
+		margin: 0;
+		width: 100%;
+		padding: 16px;
+		margin-bottom: 50px;
+	}
+	#page-contact .contact_form .okay {
+		width: 60%;
+		height: 40px;
+	}
+	#page-contact .thank-you-pop h1 {
+		font-size: 20px;
+	}
+	#page-contact .thank-you-pop p {
+		font-size: 16px;
+	}
+	#page-contact .contact_form input {
+		height: 56px;
+	}
+	#page-contact .contact_form label {
+		padding: 6px 20px;
+	}
+	#page-contact .contact_form input:focus~label,
+	#page-contact .contact_form input:valid~label,
+	#page-contact .contact_form textarea:focus~label,
+	#page-contact.contact_form textarea:valid~label {
+		font-size: 12px;
+		top: -18px;
+	}
 }
 
 /* [SM] Small devices (landscape phones, less than 768px) */
@@ -27,11 +76,28 @@
 	.card-service h5.card-title {
 		font-size: 1rem;
 	}
+	
+	#page-contact .contact_top .contact_header {
+		margin-top: 30px;
+		font-size: 35px;
+	}
+    #page-contact.contact_top .contact_text {
+		margin: 40px 25px;
+		font-size: 16px;
+	}
+	
 	#page-about .body-page p {
 		font-size: 15px;
 	}
 	
 	#page-status .service-info img {
 		width: 50%;
+	}
+	
+}
+
+@media (max-width: 991px) {
+	#page-contact .contact_top .contact_text {
+		margin: 40px 80px;
 	}
 }

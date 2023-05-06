@@ -155,6 +155,12 @@
 				}
 			}
 		},
+		"contact": {
+			"title": "Nous Contacter",
+			"hTitle": "Nous Contacter - Service Down",
+			"sect_title": "Entrer en contact avec notre équipe",
+			"sect_subtitle": "Laissez vos informations ci-dessous et notre équipe vous contactera !"
+		},
 		"search": {
 			"hTitle": "Résultat de recherche - Service Down",
 			"resultFor": "Résultat pour : {{query}}",
