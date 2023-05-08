@@ -1,6 +1,6 @@
 <?php
 	class Country {
-		static $endpoint = 'country';
+		static $endpoint = 'countries';
 		private $path = null;
 		
 		function __construct(){

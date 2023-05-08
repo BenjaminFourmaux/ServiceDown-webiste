@@ -1,6 +1,6 @@
 <?php
 	class Service {
-		static $endpoint = 'service';
+		static $endpoint = 'services';
 		private $path = null;
 		
 		function __construct(){

@@ -1,6 +1,6 @@
 <?php
 	class Report {
-		static $endpoint = 'report';
+		static $endpoint = 'reports';
 		private $path = null;
 		
 		function __construct(){
